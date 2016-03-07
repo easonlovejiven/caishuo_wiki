@@ -11,6 +11,7 @@ bundle show gem_name（显示响应gem的路径）
 启动mongodb sudo mongod
 ps -ef | grep mongo
 when you say nothing at all
+https://ruby-china.org/topics/29180 ruby block(一)
 http://www.tuicool.com/articles/nM73Enr redis安装手册
 http://tryruby.org tryruby.ory 
 http://itindex.net/detail/27447-rails3-%E9%A1%B9%E7%9B%AE-%E8%A7%A3%E6%9E%90 后台任务（1）
