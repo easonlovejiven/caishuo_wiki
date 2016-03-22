@@ -61,4 +61,10 @@ git pull ：更新远程分支最新的修改到本地
 git reset HEAD^
 如果删除了一个已经push的本地的分支想要恢复的话，运行git br -a看下远程分支纪录然后运行git co remotes/origin/T183-2 恢复分支
 
-cat ~/.gitconfig 可以自己去配置git命令的简写形式
+（1）cat ~/.gitconfig 可以自己去配置git命令的简写形式
+（2）常见git简写形式
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.st status
+git config --global alias.rh 'reset HEAD'
