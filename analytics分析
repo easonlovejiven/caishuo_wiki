@@ -1,0 +1,73 @@
+qdaily4_analytics修改与问题
+1. users表和posts表（id，impression_count，click_count，comment_count，praise_count，各渠道分享量，genre）
+2. 最小统计粒度：小时，数据结构设计
+3. 查看详情图表，可选择时间段和单位
+ssh git@42.121.104.18 登录到端口
+
+post 表设计
+文章id,浏览量,点击量,评论量,赞数,各种渠道分享量,类型
+
+(1) 生成csv文件
+
+def print_csv
+  require 'CSV'
+  filename = "public/files/20160323.csv"
+  CSV.open filename, "wb" do |csv|
+    csv << %w{UID 用户名称 邮箱 电话}
+    User.all.each do |line|
+      csv << [line.username, line.email, line.phone]
+    end
+  end
+end
+
+(2) 读取csv文件
+
+12345 35433433  342 211 66  22  9 12  2 2015021409
+
+def open_csv
+  require 'CSV'
+  filename = "20160323-2.csv"
+  CSV.open filename, "wb" do |csv|
+    old_csv = CSV.open '20160323.csv'
+    users = old_csv.read
+    users.each do |line|
+      csv << [line[0], line[1], line[2], line[3]]
+    end
+  end
+end
+
+# old_csv = CSV.open 'public/info/20160323.csv'
+# users = old_csv.read
+# users.each do |line|
+#   result = Hash["用户名称",line[0], "邮箱", line[1], "电话", line[2]]
+# end
+
+一, 第一个阶段:
+修改:表名 , 渠道列名 
+添加:新建一个controller filers_controller （文件名，create_at）
+# SumMessage.create(post_id: 242343, impression_count: 45, click_count: 65, comment_count: 88, praise_count: 33, qq_share: 65, wechat_share: 99, weibo_share: 44, genre: 3)
+# 异常处理(Timeout...)
+# 调用保存文件action (文件上传)
+# 调用计算action
+# 入库
+
+＃ （1）异常处理，xml解析
+
+＃ 任务处理
+查看任务执行情况（用于调试）
+#运行resque前台管理服务器
+resque-web -p 8282
+#打开浏览器，访问 http://0.0.0.0:8282
+#前台可以查看失败的worker及其日志，可以手动执行retry操作
+
+本周实现
+(1),实现本地上传文件测试（读取，入库）
+(2),实现按照日期检索数据(按小时，天)
+(3),点击详情页数据分析(吐出一个月的数据)
+(4),测试几个worker是否正常执行
+下周安排
+(1),把详情页数据分析搞完
+(2),接收文件类型验证，数据类型验证
+(3),和安卓对接
+(4),本周任务完成本地文件上传测试(主要是跑任务)
+

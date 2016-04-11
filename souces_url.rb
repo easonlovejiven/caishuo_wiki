@@ -2,6 +2,7 @@
 //长点儿(超过1200)的是先显示全文，再点击查看原始页面
 //旧版本的是什么都没有
 zt都是前端的
+http://www.linuxidc.com/Linux/2014-04/100244.htm 定时任务(rufus-scheduler)
 http://segmentfault.com/a/1190w000000382934 sublime常用插件儿
 www.oneapm.club rails 培训视频
 https://ruby-china.org/markdown 社区发布帖子规范
@@ -10,7 +11,9 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
-when you say nothing at all
+https://ruby-china.org/topics/22453 定时任务总结
+http://www.rubydoc.info/gems/paperclip/2.3.8/Paperclip/ClassMethods:has_attached_file paperclip 详解
+http://jimneath.org/2008/04/17/paperclip-attaching-files-in-rails.html rails paperclip
 https://ruby-china.org/topics/29180 ruby block(一)
 http://www.tuicool.com/articles/nM73Enr redis安装手册
 http://tryruby.org tryruby.ory 
