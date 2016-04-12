@@ -2,6 +2,7 @@
 //长点儿(超过1200)的是先显示全文，再点击查看原始页面
 //旧版本的是什么都没有
 zt都是前端的
+http://blog.csdn.net/xifeijian/article/details/20956605 nginx配置详解
 http://www.linuxidc.com/Linux/2014-04/100244.htm 定时任务(rufus-scheduler)
 http://segmentfault.com/a/1190w000000382934 sublime常用插件儿
 www.oneapm.club rails 培训视频
