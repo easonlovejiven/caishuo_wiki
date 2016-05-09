@@ -41,8 +41,9 @@ ruby ||= 的意思是如果不存在的话，就执行后边儿的操作
 :collection 是对实体集合进行操作，创建路由格式是： /:controller/:your_method 
 :new 是新建一个实体，创建路由格式是： /:controller/:your_method/new
 
-<%= link_to "添加模版", new_admin_market_templete_path, class: "action" %>
+<%= link_to 添加模版, new_admin_market_templete_path, class: action %>
 ruby include和extend的区别
+
 1.在类定义中引入模块，使模块中的方法成为类的实例方法
 
 这种情况是最常见的
@@ -64,3 +65,7 @@ ruby include和extend的区别
 def self.included(c) ... end 中
 
 git config --global alias.st status git 简写配置(例如)
+
+
+4.class_eval和instance_eval的区别：
+

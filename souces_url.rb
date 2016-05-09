@@ -12,6 +12,7 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+http://www.xiaozhou.net/setup-mongoid-mongodb-environment-2013-09-18.html rails + mongoid
 https://ruby-china.org/topics/22453 定时任务总结
 http://www.rubydoc.info/gems/paperclip/2.3.8/Paperclip/ClassMethods:has_attached_file paperclip 详解
 http://jimneath.org/2008/04/17/paperclip-attaching-files-in-rails.html rails paperclip
