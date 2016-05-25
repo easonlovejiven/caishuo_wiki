@@ -69,3 +69,7 @@ git config --global alias.st status git 简写配置(例如)
 
 4.class_eval和instance_eval的区别：
 
+5.解决两层N+1的问题:https://ruby-china.org/topics/30115
+比如：order.user.company
+解决单层：Order.includes(:user)
+解决两层：Order.includes(user: :campany)
