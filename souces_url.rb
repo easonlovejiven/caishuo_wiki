@@ -13,6 +13,9 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+http://www.jianshu.com/p/7de00c73a2bb 终端配置
+http://www.bkjia.com/Linuxjc/960488.html 配置iterm
+https://github.com/kristianmandrup/ransack-mongoid ransack-mongoid
 https://ruby-china.org/topics/26402 开发常用gem
 http://www.xiaozhou.net/setup-mongoid-mongodb-environment-2013-09-18.html rails + mongoid
 https://ruby-china.org/topics/22453 定时任务总结

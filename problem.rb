@@ -40,3 +40,7 @@ exception in initAndListen: 29 Data directory /data/db not found., terminating �
 
 Unknown validator: 'DockDateValidator'
 
+执行 sudo brew时遇到的问题
+
+sudo chown -R $USER /usr/local
+sudo chown -R $USER /Library/
