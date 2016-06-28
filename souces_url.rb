@@ -13,6 +13,8 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+http://www.jobui.com/mianshiti/it/ruby/8405/ ruby 加载https请求
+https://segmentfault.com/a/1190000002918225 nginx + puma + mina
 http://www.jianshu.com/p/7de00c73a2bb 终端配置
 http://www.bkjia.com/Linuxjc/960488.html 配置iterm
 https://github.com/kristianmandrup/ransack-mongoid ransack-mongoid
@@ -81,7 +83,6 @@ iterms source ~/.zshrc （https://github.com/robbyrussell/oh-my-zsh）
 http://office.caishuo.com:10080/u/yuanjianhe 
 sudo find / -name 文件名及后缀 在指定文件夹下查找特定文件
 https://office.caishuo.com:8081/ 邮件提醒常保测试
-http://www.jb51.net/article/51591.htm 学习Ruby你需要了解的相关知识（rvm, gem, bundle, rake, rails等）
 http://www.cnblogs.com/wangyuyu/p/3301473.html rake任务链接
 http://redisdoc.com/ redis命令参考
 /caishuo/web-v2/current/log 服务器查看log-error文件
@@ -155,28 +156,21 @@ http://guides.ruby-china.org/ ruby on rails 框架从入门到精通
 http://blog.csdn.net/xzyxuanyuan/article/details/7802049 ruby map用法(操作数组)
 http://www.w3cschool.cc/ruby/ruby-syntax.html ruby:基本语法
 http://blog.csdn.net/lissdy/article/details/16970111 ruby:安装sideskiq(异步设置)
-http://developer.51cto.com/art/200912/169884.html ruby连接各种数据库
 http://www.cnblogs.com/fanyangxi/articles/1632410.html ruby变量和作用域范围
 http://www.devstore.cn/service/serviceClassfiy/57.html 开发者服务平台
-http://railstutorial-china.org/ ruby on rails web开发教程
 http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI #提供的用户连接数据信息描述
 http://qianjigui.iteye.com/blog/325083 ruby常用符号总结
-http://developer.51cto.com/art/200912/170449.htm ruby常见内置方法
 http://blog.csdn.net/csfreebird/article/details/4646140 Ruby字符(串)总结
 http://pythonorg.diandian.com/post/2012-01-05/40027464147 screen命令总结
 http://blog.csdn.net/xiazdong/article/details/7959495 vim命令总结
-http://myvpn.8866.org:10180/sidekiq/workers 抛数据进程连接
-http://myvpn.8866.org:10180/client/exports 抛数据(pb.weizhuli.com)
 http://wenku.baidu.com/link?url=M5QRUK5lpxVUdxtPx91K9nkyQXci-b-u37POtJqnQDzfy_9Akj-n_XCDhjk0bxBUm1BmkunW3aQR4e806sOH_ss5ae86vynkLW20fIi0Lgi linux下压缩解压文件
 http://blog.csdn.net/garn_hsia/article/details/8490273 重要连接(一些语法当中的技巧)
 http://wangsheng2008love.blog.163.com/blog/static/78201689201052954239764/ ruby 当中的几种方法定义
 http://wenku.baidu.com/link?url=MjH42sNIIUZNLQlmlaqrbR0hNMpoe0zB4c3HGFU0VNZF9Y8LDRk4NtaoCrFNao9b1sswMe5yvGsD74kkC_uPNy8JedCxjtXBMxIrGa2sPGK
 正则表达式
 http://blog.jobbole.com/34503/ git命令
-http://blog.csdn.net/crylearner/article/details/7685158 git 提交新添加文件的命令
 http://www.cnblogs.com/rywx/archive/2012/07/25/2607568.html 数组操作方法
 http://www.zamzar.com/convert/csv-to-ods/ CSV to ODS
 https://cloudconvert.org/csv-to-xlsx CSV to XLSX
-http://myvpn.8866.org:10180 平台连接
-http://developer.51cto.com/art/200912/171056.htm Ruby 代码规范
+http://developer.51cto.com/art/200912/171056.html Ruby 代码规范
 http://jingyan.baidu.com/article/2c8c281de555e70008252add.html wine安装（qq2012安装步骤）
