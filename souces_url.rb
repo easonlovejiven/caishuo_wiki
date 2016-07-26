@@ -13,6 +13,13 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+https://segmentfault.com/a/1190000000481601 rails + postgresql
+http://www.360doc.com/content/13/0115/15/6828497_260312860.shtml ruby && rails 优缺点分析
+http://www.cnblogs.com/abbuggy/archive/2012/10/21/2732868.html rails find和where的区别
+https://junnan.org/2015/08/sidekiq.html sidekiq
+https://ruby-china.org/topics/10414 ruby proc, block, eval, lamda
+http://www.ibm.com/developerworks/cn/linux/l-cn-closure/ 闭包
+http://www.cnblogs.com/richard1234/p/3829074.html sidekiq
 http://www.jobui.com/mianshiti/it/ruby/8405/ ruby 加载https请求
 https://segmentfault.com/a/1190000002918225 nginx + puma + mina
 http://www.jianshu.com/p/7de00c73a2bb 终端配置
@@ -50,7 +57,6 @@ http://www.jb51.net/article/64642.htm   (https://github.com/rspec/rspec-rails) r
 http://ruby-doc.org/core-2.2.2/Marshal.html ruby Marshal用法
 http://www.infoq.com/cn/articles/Rails-Performance rails 常见性能问题e
 http://www.yiibai.com/ruby_on_rails/  rails教程 
-http://m.testing.caishuo.com/market/download?channel=momo3
 启动redis：src/redis-server（进入redis下载的文件的根目录） 进入redis客户端：src/redis-cli
 http://www.tuicool.com/articles/aQbQ3u redis常用命令
 /Users/eason/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems 项目gems路径
@@ -67,28 +73,18 @@ http://rails-practice.com/content/ rails最佳实践
 rake db:create RAILS_ENV=test rails 生成不同环境下的数据库
 http://select2.github.io/options.html jquery select2()
 http://blog.csdn.net/dazhi_100/article/details/12509807 判断nil的总结
-http://office.caishuo.com:10080/  
-https://office.caishuo.com:8081/
-http://issue.caishuo.com/my/http://www.tuicool.com/articles/aQbQ3u
 http://www.widlabs.com/article/mac-os-x-install-mysql-with-tar-gz mysql安装方法
 http://tool.ganchang.cn/getcolortool.html 颜色选择器56024b8ab18011776b001168
 http://blog.sina.com.cn/s/blog_63041bb80101f0r0.html rails常用表单组件奥
-bundle exec rake db:migrate
 gem uninstall azure -v 0.0.0
 http://www.open-open.com/ open-open技术网站
 http://www.open-open.com/news/tags/Rails open-open rails消息
 http://www.liaoxuefeng.com 廖学峰技术教程（包含详细的git教程）
 rvm implode 删除rvm
 iterms source ~/.zshrc （https://github.com/robbyrussell/oh-my-zsh）
-http://office.caishuo.com:10080/u/yuanjianhe 
 sudo find / -name 文件名及后缀 在指定文件夹下查找特定文件
-https://office.caishuo.com:8081/ 邮件提醒常保测试
 http://www.cnblogs.com/wangyuyu/p/3301473.html rake任务链接
 http://redisdoc.com/ redis命令参考
-/caishuo/web-v2/current/log 服务器查看log-error文件
-git clone git@caishuo:caishuo/html.git clone前端项目
-binding.pry rails项目断电调试
-ssh caishuo@192.168.1.10 -p 2002 登陆才说服务器端数据库 密码：caishuo
 http://mac.dailydownloaded.com/zh/developer-tools/programming-software/6793-sequel-pro-download-install Mac下载安装sequel-pro
 https://ruby.taobao.org/ rails淘宝镜像
 http://blog.csdn.net/delphiwcdj/article/details/19679891 homebrew详细介绍

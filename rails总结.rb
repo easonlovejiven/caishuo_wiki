@@ -41,7 +41,11 @@ ruby ||= 的意思是如果不存在的话，就执行后边儿的操作
 :collection 是对实体集合进行操作，创建路由格式是： /:controller/:your_method 
 :new 是新建一个实体，创建路由格式是： /:controller/:your_method/new
 
-<%= link_to 添加模版, new_admin_market_templete_path, class: action %>
+link_to 添加模版, new_admin_market_templete_path, class: action 
+
+ruby sort方法:
+sort方法可以加一个或者两个参数的block，这个block可以返回1 0 -1来表示这两个参数大于 等于 小于
+Hash的sort方法是把一个Hash对象转换成以［key，value］为单个元素的一个数组，然后再用数组的sort方法进行排序
 
 ruby include和extend的区别
 
@@ -70,12 +74,25 @@ git config --global alias.st status git 简写配置(例如)
 
 4.class_eval和instance_eval的区别：
 
+解决英文下划线问题(ransack存在的问题)
+ChannelCode.where("code like '%\\_%'").count 需要两个转义字符
+
 5.解决两层N+1的问题:https://ruby-china.org/topics/30115
 比如：order.user.company
 解决单层：Order.includes(:user)
 解决两层：Order.includes(user: :campany)
 
-gemset 和 bundler 根本要解决的就不是同一个问题，也不知道有什么好对比的。一个关注的是本地环境，一个关注的是项目自身的依赖，使用它们的时候思维模型根本都是不同的。
+6.拟态方法/类宏
+(1),拟态方法的作用是定义一个方法有不同的调用方式 比如：puts '' / puts('')
+(2),类宏
+使用场景:在一个类定义中调用一个类方法，进而达到扩展这个类的目的
+总结起来说:
+拟态方法其实是在描述一个方法调用的外在形式（加括号和不加括号)
+类宏就是在描述一个方法调用的目的（用来扩展类）和使用场景（必须在类定义中使用）。所以这两者是不矛盾的。
 
+crontab -e 编辑 -l查看 shift x 退出
+20 17 * * * cd /home/deployer/backend/current && /home/deployer/.rbenv/shims/bundle exec rake RAILS_ENV=production sms:timing_send
+
+gemset 和 bundler 根本要解决的就不是同一个问题，也不知道有什么好对比的。一个关注的是本地环境，一个关注的是项目自身的依赖，使用它们的时候思维模型根本都是不同的。
 和 Bundler 打交道的时候，思维模型是：不管什么样的环境，反正对于这个项目，我要求 gems 怎样怎样／或者针对特定条件的环境（比如某种特定版本的解释器），我要求 gems 怎样怎样
 和 gemset 打交道的时候，思维模型是：不管什么样的项目，只要切换到我（gemset）这里，我就可以提供 xxx 版本的 xxx gems 供你使用。你当然可以更新我（gemset）管理的 gems，但是记住：你创造我的目的就是为了给本地开发环境设定一个可控的 gems 环境。如果你不 care 这件事情，请你直接使用 global gemset，然后从此忘了我吧——懂得人自然懂。
