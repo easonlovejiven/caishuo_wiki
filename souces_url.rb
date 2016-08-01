@@ -14,7 +14,7 @@ bundle show gem_name（显示响应gem的路径）
 启动mongodb sudo mongod
 ps -ef | grep mongo
 https://segmentfault.com/a/1190000000481601 rails + postgresql
-http://www.360doc.com/content/13/0115/15/6828497_260312860.shtml ruby && rails 优缺点分析
+http://www.360doc.com/content/13/0115/15/6828497_260312860.html ruby && rails 优缺点分析
 http://www.cnblogs.com/abbuggy/archive/2012/10/21/2732868.html rails find和where的区别
 https://junnan.org/2015/08/sidekiq.html sidekiq
 https://ruby-china.org/topics/10414 ruby proc, block, eval, lamda

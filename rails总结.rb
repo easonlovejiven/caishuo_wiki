@@ -63,7 +63,7 @@ ruby include和extend的区别
 
 3.在类定义中引入模块，既希望引入实例方法，也希望引入类方法
 
-这个时候需要使用 include,
+这个时候需要使用 included,
 
 但是在模块中对类方法的定义有不同，定义出现在self.included块中
 
@@ -90,9 +90,16 @@ ChannelCode.where("code like '%\\_%'").count 需要两个转义字符
 拟态方法其实是在描述一个方法调用的外在形式（加括号和不加括号)
 类宏就是在描述一个方法调用的目的（用来扩展类）和使用场景（必须在类定义中使用）。所以这两者是不矛盾的。
 
+钩子方法:在程序运行时扩展程序的行为
+
 crontab -e 编辑 -l查看 shift x 退出
 20 17 * * * cd /home/deployer/backend/current && /home/deployer/.rbenv/shims/bundle exec rake RAILS_ENV=production sms:timing_send
+
+rails 正则匹配 匹配后边儿：/#{date}.*/i 两边儿都匹配：/*.#{date}.*/i
+EngineerStatic.where(info_date: /.*#{date}.*/i, user_id: user.id).desc(:info_date)
 
 gemset 和 bundler 根本要解决的就不是同一个问题，也不知道有什么好对比的。一个关注的是本地环境，一个关注的是项目自身的依赖，使用它们的时候思维模型根本都是不同的。
 和 Bundler 打交道的时候，思维模型是：不管什么样的环境，反正对于这个项目，我要求 gems 怎样怎样／或者针对特定条件的环境（比如某种特定版本的解释器），我要求 gems 怎样怎样
 和 gemset 打交道的时候，思维模型是：不管什么样的项目，只要切换到我（gemset）这里，我就可以提供 xxx 版本的 xxx gems 供你使用。你当然可以更新我（gemset）管理的 gems，但是记住：你创造我的目的就是为了给本地开发环境设定一个可控的 gems 环境。如果你不 care 这件事情，请你直接使用 global gemset，然后从此忘了我吧——懂得人自然懂。
+
+http://blog.csdn.net/besfanfei/article/details/7966987 rails string/symbol的区别
