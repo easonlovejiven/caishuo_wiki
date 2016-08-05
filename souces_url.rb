@@ -13,6 +13,8 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+https://segmentfault.com/a/1190000002490286 cap 和 mina
+http://www.tuicool.com/articles/qqyEZj mina 和 cap 
 https://segmentfault.com/a/1190000000481601 rails + postgresql
 http://www.360doc.com/content/13/0115/15/6828497_260312860.html ruby && rails 优缺点分析
 http://www.cnblogs.com/abbuggy/archive/2012/10/21/2732868.html rails find和where的区别
@@ -92,9 +94,7 @@ http://blog.csdn.net/thinkdiff/article/details/25075047 Mac下iterm安装教程
 http://www.cnblogs.com/yuanyouqi/archive/2010/04/28/1722738.htmlmysql导入导出总结
 http://blog.163.com/www_iloveyou_com/blog/static/2116583722013111113954760/ 生成git－key链接
 http://blog.sina.com.cn/s/blog_9ea3a4b70101ihl3.html Mac安装mysql两种方案
-https://ruby-china.org/topics/25746 才说招聘
 http://www.open-open.com/lib/view/open1389705004242.html 数据库查询优化总结
-https://ruby-china.org/topics/23559 甲骨文招聘
 http://www.ruanyifeng.com/blog/2014/06/git_remote.html git 命令
 https://github.com/mislav/will_paginate/wiki rails 分页
 http://liubin.org/2013/06/26/rails-4-new-features/?utm_source=tuicool rails4.0以上的一些新的功能
@@ -104,7 +104,6 @@ http://kb.cnblogs.com/page/132209/ git分支管理详解
 http://coffee-script.org/ coffee中文网首页
 http://www.gruntjs.net/getting-started grunt中文官网
 http://www.it165.net/os/html/201404/8092.html ubuntu安装node.js&&nmp
-https://github.com/SparkYacademy/spark-front 火花前端框架
 http://bulo.hujiang.com/diary/997812/ ruby各种资料(rails语法整理)
 /opt/aptana/AptanaStudio3/AptanaStudio3 -clean 启动aptana命令
 https://github.com/SparkYacademy/spark/wiki 资料库
@@ -141,8 +140,6 @@ http://www.zamzar.com/convert/xlsx-to-csv 文件在线转换
 http://mp.weixin.qq.com/wiki/home/index.html 微信开发者文档
 http://www.imooc.com/learn/230 rails 项目的开发视频
 http://www.puahome.com/ 坏男孩儿
-http://oa.cfmg.org.cn:7890/oa/themes/mskin/login/login.jsp 修改后的连接
-http://211.157.159.70:7890/oa/themes/mskin/login/login.jsp 集团OA系统
 http://blog.csdn.net/daydreamingboy/article/details/6725328 ruby循环方法归纳
 http://www.imooc.com/ 各种编程的视频(书籍)资料
 http://www.cslog.cn/Content/ruby_benchmark/ 船长日志（用来测试不同ruby代码的运行速度）
