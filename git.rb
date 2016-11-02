@@ -73,4 +73,7 @@ git config --global alias.br branch
 git config --global alias.st status
 git config --global alias.rh 'reset HEAD'
 重命名分支
-git branch -m <old_branch_name> <new_branch_name>   
+git branch -m <old_branch_name> <new_branch_name>  
+
+清理本地的rebase
+rm -fr "/Users/owhat/owhat3/.git/rebase-apply" 

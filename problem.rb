@@ -15,8 +15,11 @@ gem install rmagick -v '2.15.2’执行这个不行，因为宝rmagick依赖太�
 
 2,服务器导出sql文件
 (1),登陆服务器：ssh caishuo@192.168.1.10 -p 2002 登陆才说服务器端数据库 密码：caishuo
-(2),导出需要的数据库：mysqldump -u caishuo -p caishuo < caishuo.sql (导出不在mysql命令下执行)
+(2),导出需要的数据库：  (导出不在mysql命令下执行)
 (3),在服务器上cp这个sql文件到本地：scp -P 2002 caishuo@testing.caishuo.com:/home/caishuo/caishuo.sql .
+ssh owhat@10.171.34.43 -p 65535
+scp -P 65535 owhat@10.171.34.43:/home/owhat/owhat3.sql .
+scp -P 2002 caishuo@testing.caishuo.com:/home/caishuo/caishuo.sql .
 
 3,解决软链接
 原文件夹地址 /home/ddfivfou/www/abc
@@ -40,7 +43,9 @@ exception in initAndListen: 29 Data directory /data/db not found., terminating �
 
 Unknown validator: 'DockDateValidator'
 
-执行 sudo brew时遇到的问题
+/Users/owhat/.rvm/bin/rvm: line 66: shell_session_update: command not found 解决办法：https://github.com/rvm/rvm/issues/3708
 
+执行 sudo brew时遇到的问题
 sudo chown -R $USER /usr/local
 sudo chown -R $USER /Library/
+

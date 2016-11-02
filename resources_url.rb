@@ -13,6 +13,14 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+ http://www.rongcloud.cn/docs/push_service.html#Server_API广播推送 文档
+http://wiki.jikexueyuan.com/project/rails-practice/ rails 极客学院
+http://www.tuicool.com/articles/7v2Yree ruby 内存管理
+https://github.com/saberma/china_sms 短信平台接口
+http://www.cnblogs.com/sunjie9606/archive/2012/03/15/2397626.html corn 表达式总结
+http://www.jianshu.com/p/b3dfe567a539 rails 缓存介绍
+http://www.jikexueyuan.com/course/628_1.html rails grape (极客学院)
+https://segmentfault.com/a/1190000002398595 rails 目录详情
 https://segmentfault.com/a/1190000002490286 cap 和 mina
 http://www.tuicool.com/articles/qqyEZj mina 和 cap 
 https://segmentfault.com/a/1190000000481601 rails + postgresql

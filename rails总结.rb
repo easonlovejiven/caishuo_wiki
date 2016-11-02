@@ -1,4 +1,4 @@
-rails  巧用总结
+frails  巧用总结
 一次查询多个数据in用法:Model.where(id: array)/Model.where(“id in (?)”,array)
 一次返回指定属性的数组:Model.pluck(“id,name”)/Model.all.map(&:id)
 http://www.tuicool.com/articles/rayuim turbolinks（实现局部刷新的功能）
@@ -8,7 +8,7 @@ config/initializers/eason.rb 在config/initializers文件夹里边儿的文件�
 scope:
 (1) scope :big_roles, -> {where("roles.id > 2")} #找出id大于2的角色(不带参数)
 (2) scope :get_roles, ->(role_id) { where(role_id: role_id) } #找出staffer里边儿不同角色的个数(带参数)
-
+@model.valid? 等于 false的时候就证明 不是合法的对象@model.errors 就有相关的错误信息
 rails 引用文件
 <%= stylesheet_link_tag "jquery-ui" %>
 <%= javascript_include_tag "jquery-ui.min" %>
@@ -77,7 +77,8 @@ git config --global alias.st status git 简写配置(例如)
 解决英文下划线问题(ransack存在的问题)
 ChannelCode.where("code like '%\\_%'").count 需要两个转义字符
 
-5.解决两层N+1的问题:https://ruby-china.org/topics/30115
+5.解决两层N+1的问题:https://r
+uby-china.org/topics/30115
 比如：order.user.company
 解决单层：Order.includes(:user)
 解决两层：Order.includes(user: :campany)
@@ -108,3 +109,38 @@ http://blog.csdn.net/besfanfei/article/details/7966987 rails string/symbol的区
 性能设计的正途是充分研究业务的数据流，充分利用（exploit）数据的特性来削减运算、避免瓶颈。至于那些工具只是给你参考的，就算要用最好也是拆了、消化了、自己改造了再用
 
 跨站请求伪造（CSRF）是一种攻击方式，A 网站的用户伪装成 B 网站的用户发送请求，在 B 站中添加、修改或删除数据，而 B 站的用户绝然不知
+
+To have launchd start redis now and restart at login:
+  brew services start redis
+Or, if you dont want/need a background service you can just run:
+  redis-server /usr/local/etc/redis.conf
+
+将str = 'abcd'转换成 a=1&b=2
+array = [] 
+1, str.length.times{|i| array << str[i]}
+2, array.map{|i| i + '=' + (array.index(i) + 1).to_s}.join('&')
+
+或者 
+
+date = Time.local(2016, 9 , 21 , 23, 5, 30)
+
+has_one 和 belongs_to 后面的 foreign_id 含义是不一样的，一个是「去对面的表里找这个字段」，另一个是「使用这个字段做」
+
+JSON.parse(ids).to_a.reject(&:blank?).map(&:to_i) 
+reject(&:blank?)的意思是去除数组当中的nil/"" 也可以这样用reject(&:present?)
+
+1 rails 4种 update总结
+update 走回调和验证
+update_all 都不会
+update_attribute(:send_status, 3) 走回调也不走验证 一般用来更新一个字段的值，boolean 
+update_attributes({:name => “xyz”, :age => 20}) 走回调和验证 可以更新多个字段 升级版
+源码：
+def update_attribute(name, value)
+  send(name.to_s + '=', value)
+  save(false)
+end
+def update_attributes(attributes)
+  self.attributes = attributes
+  save
+end
+
