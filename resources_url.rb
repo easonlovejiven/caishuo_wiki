@@ -13,7 +13,10 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
- http://www.rongcloud.cn/docs/push_service.html#Server_API广播推送 文档
+http://www.cnblogs.com/xueweihan/p/5743327.html merge 和 rebase的区别
+http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html ( mvc / mpv / mvvm)
+http://blog.csdn.net/laoniyouxi123/article/details/51161157 mysql 面试题 (https://www.douban.com/note/345871485/)
+http://www.rongcloud.cn/docs/push_service.html#Server_API广播推送 文档
 http://wiki.jikexueyuan.com/project/rails-practice/ rails 极客学院
 http://www.tuicool.com/articles/7v2Yree ruby 内存管理
 https://github.com/saberma/china_sms 短信平台接口
@@ -24,7 +27,7 @@ https://segmentfault.com/a/1190000002398595 rails 目录详情
 https://segmentfault.com/a/1190000002490286 cap 和 mina
 http://www.tuicool.com/articles/qqyEZj mina 和 cap 
 https://segmentfault.com/a/1190000000481601 rails + postgresql
-http://www.360doc.com/content/13/0115/15/6828497_260312860.html ruby && rails 优缺点分析
+http://www.360doc.com/content/13/0115/15/6828497_260312860.shtml ruby && rails 优缺点分析
 http://www.cnblogs.com/abbuggy/archive/2012/10/21/2732868.html rails find和where的区别
 https://junnan.org/2015/08/sidekiq.html sidekiq
 https://ruby-china.org/topics/10414 ruby proc, block, eval, lamda
