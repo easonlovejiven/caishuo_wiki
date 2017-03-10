@@ -16,10 +16,16 @@ gem install rmagick -v '2.15.2’执行这个不行，因为宝rmagick依赖太�
 2,服务器导出sql文件
 (1),登陆服务器：ssh caishuo@192.168.1.10 -p 2002 登陆才说服务器端数据库 密码：caishuo
 (2),导出需要的数据库：  (导出不在mysql命令下执行)
+服务器上安装：
+yum install ImageMagick
+
 (3),在服务器上cp这个sql文件到本地：scp -P 2002 caishuo@testing.caishuo.com:/home/caishuo/caishuo.sql .
 ssh owhat@10.171.34.43 -p 65535
 scp -P 65535 owhat@10.171.34.43:/home/owhat/owhat3.sql .
 scp -P 2002 caishuo@testing.caishuo.com:/home/caishuo/caishuo.sql .
+(4)把本地文件cap到服务器上(在本地执行并且与所要拷贝文件处在同一级文件夹下)
+scp fx_template.zip ubuntu@101.201.114.181:/var/www/fuxiong
+ubuntu@101.201.114.181:/var/www/fuxiong 拷到这台服务器的/var/www/fuxiong 文件夹下
 
 3,解决软链接
 原文件夹地址 /home/ddfivfou/www/abc
@@ -48,4 +54,21 @@ Unknown validator: 'DockDateValidator'
 执行 sudo brew时遇到的问题
 sudo chown -R $USER /usr/local
 sudo chown -R $USER /Library/
+
+mysql 安装之后启动
+
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+To connect run:
+    mysql -uroot
+
+To have launchd start mysql at login:
+  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+Then to load mysql now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+Or, if you don't want/need launchctl, you can just run:
+  mysql.server start
+==> Summary
+🍺  /usr/local/Cellar/mysql/5.7.11: 12,812 files, 434.6M
 

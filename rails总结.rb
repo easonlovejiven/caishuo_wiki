@@ -1,4 +1,4 @@
-rails  巧用总结
+railsrails  巧用总结
 一次查询多个数据in用法:Model.where(id: array)/Model.where(“id in (?)”,array)
 一次返回指定属性的数组:Model.pluck(“id,name”)/Model.all.map(&:id)
 http://www.tuicool.com/articles/rayuim turbolinks（实现局部刷新的功能）
@@ -65,7 +65,7 @@ def self.included(c) ... end 中
 git config --global alias.st status git 简写配置(例如)
 
 
-4.class_eval和instance_eval的区别：
+4.class_eval和instance_eval的区别：文字当代码执行（一个转换成类方法一个实例方法）
 
 解决英文下划线问题(ransack存在的问题)
 ChannelCode.where("code like '%\\_%'").count 需要两个转义字符
@@ -128,6 +128,7 @@ update_all(status: 2) 直接生成sql，从而跳过rails层的验证和回调
 update_attribute(:send_status, 3) 走回调也不走验证 一般用来更新一个字段的值，boolean 
 update_attributes({:name => “xyz”, :age => 20}) 走回调和验证 可以更新多个字段 升级版
 update_column(:send_status, 3)会直接生成sql语句去操作数据库，从而跳过rails层的验证和回调
+update_columns(account: "13693099755") 同上
 源码：
 def update_attribute(name, value)
   send(name.to_s + '=', value)
@@ -199,6 +200,34 @@ attr_accessor是一个ruby方法
 attr_accessor被修饰的属性，被称为虚拟属性，它跟数据库没有关系，它只存在memory的scope，
 他也是有get，set方法，但是你要注意一点就是在console里面new出对象时返回的对象数据列表中是看不到这些属性的，
 因为console只显示的是你schema的字段，虚拟属性没有在其里面，所以看不到，
-你可以用respon_to?方法去判断属性是否可以new出来 
+你可以用respon_to?方法去判断属性是否可以new出来
 
+补充：cattr_accessor 定义类和实例类的属性访问器 http://apidock.com/rails/Class/cattr_accessor
 
+(6)别名方法总结：
+
+alias ruby的关键字 原有的方法名在最后位置（alias后面跟的直接是方法名，不是字符串也不是符号）
+alias_method 是moudle的一个私有实例方法 接收两个参数第一个是原始方法（字符串或者符号）
+alias_method_chain 是ActiveSupport的一个公有实例方法 接收两个参数第二个是原始方法（字符串或者符号）
+
+(7)attr_accessor和delegate的区别
+attr_accessor: 添加类的虚拟属性。
+delegate: 可以让类使用关联类的方法，不但是关联类的属性方法，而且是后来定义的方法。
+
+(8)lambda, proc, block 知识点
+当scope后面跟lambda时，调用这个scope必须加参数 例如:
+定义： scope: find_comments_for_commentable, lambda {|user| where(user_id: user.id)}
+调用时： Class.find_comments_for_commentable User.first
+
+(9)RAILS_ENV=production bundle exec rails c 不同开发环境下
+ActiveSupport::JSON.decode / eval  将json解析成hash (eval性能较差)
+
+(10)ruby提供的类加载命令：
+(1)load: 每次都会重新加载整个文件(或者类)，刷新内存中的类定义. 浪费
+(2)autoload: 等到真的访问到的时候再加载 (解决了load的性能问题)
+(3)require: 和 autoload 一样, require 只在第一次被调用的时候被触发，之后针对相同文件的 require 就不会真正执行了（不会刷新内存中的定义了）
+require 比 load 更强大一些, load 是必须给出文件后缀的，而 require 可以不给出后缀，且相同的名字对 .so .o .dll都是有效的：
+(4)require_relative: 和require类似
+
+(11) 迁移文件总结
+添加: add_column, 删除: remove_column, 修改(列明): rename_column

@@ -13,6 +13,14 @@ bundle show gem_name（显示响应gem的路径）
 常用资源链接：
 启动mongodb sudo mongod
 ps -ef | grep mongo
+
+mysql启动方式 sudo cd /usr/local/var/mysql  
+sudo mysqld_safe
+http://www.tuicool.com/articles/J7bYJfN url 和 path的区别
+https://ruby-china.org/wiki/how_to_create_a_gem 通过bundle创建一个gem 并且push到rubygems
+https://segmentfault.com/a/1190000004351558 rails 基础入门
+https://www.rails365.net/ 极客总结
+http://shichengwei.com/ 
 http://www.cnblogs.com/xueweihan/p/5743327.html merge 和 rebase的区别
 http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html ( mvc / mpv / mvvm)
 http://blog.csdn.net/laoniyouxi123/article/details/51161157 mysql 面试题 (https://www.douban.com/note/345871485/)
