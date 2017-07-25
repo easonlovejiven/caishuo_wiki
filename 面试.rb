@@ -1,12 +1,18 @@
-第一个：
-4年经验
-常用Gem：device，ransak，pagenate
-缓存：redis，没用过rails的缓存
-定时任务：whenever
-nginx 用过
-git 用过
-mongodb,pg,mysql,redis 用过
 
-缓存：基本不了解
-session&&cookie 还行
-并发，性能优化不了解
+第一个：吕志杰(5-6) 20K
+逻辑思路远大于编码能力
+
+第二个：蒲旭 1.5 6K
+unpass
+
+第三个：裴智慧 1.5 10K
+思路大于编码能力
+
+第四个：冯孟阳 1.5 pass
+(1) find / find_by 不清楚
+(2) update_attributes 没有过
+
+第五个：殷海亮 4 20
+
+第六个：宫贺 2 16 7.20
+

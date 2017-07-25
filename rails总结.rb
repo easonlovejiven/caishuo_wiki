@@ -119,7 +119,7 @@ date = Time.local(2016, 9 , 21 , 23, 5, 30)
 
 has_one 和 belongs_to 后面的 foreign_id 含义是不一样的，一个是「去对面的表里找这个字段」，另一个是「使用这个字段做」
 
-JSON.parse(ids).to_a.reject(&:blank?).map(&:to_i) 
+JSON.parse(ids).to_a.reject(&:blank?).map(&:to_i)
 reject(&:blank?)的意思是去除数组当中的nil/"" 也可以这样用reject(&:present?)
 
 1 rails 4种 update总结
@@ -196,7 +196,7 @@ attr_accessible 是一个rails方法，它可以放实例变量进一个mass ass
 就是说要migrate添加到数据库的表里面，可以通过CRUD来操作这些属性在数据库的值 
 我犯的错误就是没有migrate进数据库就想在console使用和test，所以就卡住了 
 
-attr_accessor是一个ruby方法 
+attr_accessor是一个ruby方法
 attr_accessor被修饰的属性，被称为虚拟属性，它跟数据库没有关系，它只存在memory的scope，
 他也是有get，set方法，但是你要注意一点就是在console里面new出对象时返回的对象数据列表中是看不到这些属性的，
 因为console只显示的是你schema的字段，虚拟属性没有在其里面，所以看不到，
@@ -224,10 +224,17 @@ ActiveSupport::JSON.decode / eval  将json解析成hash (eval性能较差)
 
 (10)ruby提供的类加载命令：
 (1)load: 每次都会重新加载整个文件(或者类)，刷新内存中的类定义. 浪费
-(2)autoload: 等到真的访问到的时候再加载 (解决了load的性能问题)
+(2)autoload: 等到真的访问到的时候再加载 (解 决了load的性能问题)
 (3)require: 和 autoload 一样, require 只在第一次被调用的时候被触发，之后针对相同文件的 require 就不会真正执行了（不会刷新内存中的定义了）
 require 比 load 更强大一些, load 是必须给出文件后缀的，而 require 可以不给出后缀，且相同的名字对 .so .o .dll都是有效的：
 (4)require_relative: 和require类似
 
 (11) 迁移文件总结
 添加: add_column, 删除: remove_column, 修改(列明): rename_column
+
+修改密码方案：
+(1)user.encrypt(123456) 返回 "0a4d2f2f77750d6b32f0ec3696f995406e56aa2f" 赋值给salt
+(2)update(password: 123456)
+
+
+attr_accessible 和 attr_accessor
